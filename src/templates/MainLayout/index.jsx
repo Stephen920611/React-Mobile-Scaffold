@@ -6,7 +6,7 @@ import CustomIcon from 'templates/ToolComponents/CustomIcon';
 import { PureComponent } from 'react';
 
 import { TabBar, Tabs } from 'antd-mobile';
-import { EnumIconTypes } from 'constants/EnumDefaultMenus';
+import { EnumIconTypes, EnumDefaultMenus } from 'constants/EnumDefaultMenus';
 
 
 import {
@@ -129,7 +129,7 @@ export default class MainLayout extends PureComponent {
         });
         return (
             <div>
-                <div style={{width: "100%", height: 50, backgroundColor: "red"}}></div>
+                <div style={{width: "100%", height: 66, backgroundColor: "#161823"}}></div>
                 <Tabs
                     tabs={tabs}
                     initalPage={2}
@@ -148,32 +148,15 @@ export default class MainLayout extends PureComponent {
     render() {
         const currentUrl = this.context.router.route.match.path;
 
+        let title;
+        EnumDefaultMenus.map((item, idx)=>{
+            if(item.url == currentUrl) title = item.label;
+        });
         return (
             <div className={styles["main-layout"]}>
-                <TabBar
-                    unselectedTintColor="#949494"
-                    tintColor="#33A3F4"
-                    barTintColor="white"
-                    hidden={this.state.hidden}
-                >
-                    {
-                        EnumMenus.map((item, idx) => (
-                            <TabBar.Item
-                                title={item.label}
-                                key={idx}
-                                icon={item.icon}
-                                selectedIcon={item.selectedIcon}
-                                selected={item.url.indexOf(currentUrl) !== -1}
-                                // badge={1}
-                                onPress={() => this.context.router.history.push(item.url[0])}
-                            >
-                                {this.renderContent(this.props.children, item.children)}
-                            </TabBar.Item>
-                        ))
-                    }
-                </TabBar>
+                <div className={styles["main-header"]} style={{backgroundColor: "#161823"}}>{title}</div>
+                {this.props.children}
             </div>
         );
     }
 }
-

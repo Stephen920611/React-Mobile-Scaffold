@@ -38,62 +38,28 @@ export const EnumIconTypes = {
  */
 export const EnumDefaultMenus = [
     {
-        label: '运营数据',
-        icon: <div style={{
-            width: '22px',
-            height: '22px',
-            background: 'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  21px 21px no-repeat' }}
-        />,
-        selectedIcon: <div style={{
-            width: '22px',
-            height: '22px',
-            background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  21px 21px no-repeat' }}
-        />,
-
-        children: [
-            {
-                label: '运行',
-                icon: {
-                    appType: EnumIconTypes.antd,
-                    iconType:'switcher'
-                },
-                url: EnumRouter.operateD_run,
-                children: []
-            },
-            {
-                label: '延误',
-                icon: {
-                    appType: EnumIconTypes.antd,
-                    iconType:'switcher'
-                },
-                url: EnumRouter.operateD_delay,
-                children: []
-            },
-        ]
+        label: '成都',
+        url: EnumRouter.generalMessage,
     },
     {
-        label: '指标分析',
-        icon: <div style={{
-            width: '22px',
-            height: '22px',
-            background: 'url(https://gw.alipayobjects.com/zos/rmsportal/BTSsmHkPsQSPTktcXyTV.svg) center center /  21px 21px no-repeat' }}
-        />,
-        selectedIcon: <div style={{
-            width: '22px',
-            height: '22px',
-            background: 'url(https://gw.alipayobjects.com/zos/rmsportal/ekLecvKBnRazVLXbWOnE.svg) center center /  21px 21px no-repeat' }}
-        />,
-        children: [
-            {
-                label: 'TEST',
-                icon: {
-                    appType: EnumIconTypes.antd,
-                    iconType:'switcher'
-                },
-                url: EnumRouter.IndexAnalysis_test,
-                children: []
-            },
-        ]
+        label: '运营收入情况',
+        url: EnumRouter.operateD_run,
     },
+    {
+        label: '不正常航班',
+        url: EnumRouter.operateD_run,
+    },
+    {
+        label: '重点关注航班',
+        url: EnumRouter.operateD_run,
+    },
+    {
+        label: '延误航班',
+        url: EnumRouter.operateD_run,
+    },
+    {
+        label: '运营分析',
+        url: EnumRouter.operateD_run,
+    }
 ];
 

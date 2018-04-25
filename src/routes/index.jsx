@@ -14,6 +14,7 @@ import { NoMatch } from './routeTool';
 
 import CommonRoutes from './common';                          // 公共模块--相关路由,如:登录,注册...
 import OperationalDataRoutes from './operationalData';        // 运营数据--相关路由
+import GeneralMessageRoutes from './generalMessage';        // 运营数据--相关路由
 
 /**
  * 检测是否登录
@@ -39,6 +40,9 @@ const Routes = () => (
 
             {/* 运营数据--路由 */}
             {OperationalDataRoutes()}
+
+            {/* 综合信息--路由 */}
+            {GeneralMessageRoutes()}
 
             {/* 404 NOT found */}
             <Route component={NoMatch} />

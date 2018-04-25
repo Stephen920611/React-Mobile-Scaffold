@@ -3,8 +3,8 @@
  */
 
 let conf = {
-    appEntry: './src/index.js',                          // 入口文件
-    entryFileName: './publish-index.html',               // 入口文件名称
+    appEntry: './src/Index.js',                          // 入口文件
+    entryFileName: './publish-Index.html',               // 入口文件名称
     appName: 'platform',                                 // 项目名称
 	proxyPath: process.argv[3] ? process.argv[3] : '/',  // 代理的前缀 注意：后面必须带斜线
     webPath: process.argv[2],    // web目录
@@ -169,7 +169,7 @@ function doCompilerPlatform() {
 
             if (err == null) {
                 if (stat.isFile()) {
-                    fs.renameSync(conf.entryFileName, conf.webPath + '/index.html');
+                    fs.renameSync(conf.entryFileName, conf.webPath + '/Index.html');
                     isDone();
                 }
             }

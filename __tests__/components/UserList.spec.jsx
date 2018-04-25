@@ -1,5 +1,5 @@
 import React from 'react';
-import UserList from '../../src/routes/userList/index';
+import UserList from '../../src/routes/userList/Index';
 import { shallow } from 'enzyme';
 
 

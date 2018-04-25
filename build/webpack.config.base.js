@@ -234,7 +234,7 @@ module.exports = {
     },
 
     entry: {
-        app: ['./src/index'],
+        app: ['./src/Index'],
     },
 
     // 指定模块目录名称
